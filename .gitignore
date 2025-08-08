@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Generated files for Vercel deployment (copies from src/ and public/)
+/main.js
+/style.css
+/icon-*.svg
+/favicon.ico
+/favicon.svg
