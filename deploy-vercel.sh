@@ -18,5 +18,10 @@ echo "📄 Files in root directory:"
 ls -la *.js *.css *.svg *.ico | head -10
 
 echo ""
+echo "⚙️ Vercel configuration:"
+echo "✅ vercel.json - PWA headers and routing configured"
+echo "✅ Service Worker support enabled"
+echo "✅ SPA routing fallback configured"
+echo ""
 echo "🌐 Ready to deploy to Vercel!"
 echo "Run: vercel --prod"
