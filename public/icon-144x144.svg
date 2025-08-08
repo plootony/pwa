@@ -1,0 +1,31 @@
+<svg width="144" height="144" viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <rect width="144" height="144" rx="14.4" ry="14.4" fill="url(#grad)"/>
+    
+    <!-- Newspaper icon -->
+    <rect x="28.8" y="28.8" width="86.39999999999999" height="86.39999999999999" fill="white" rx="2.88"/>
+    
+    <!-- Header -->
+    <rect x="36" y="36" width="72" height="14.4" fill="#2563eb"/>
+    
+    <!-- Text lines -->
+    <rect x="36" y="60.48" width="31.68" height="4.32" fill="#64748b"/>
+    <rect x="76.32000000000001" y="60.48" width="31.68" height="4.32" fill="#64748b"/>
+    
+    <rect x="36" y="69.12" width="31.68" height="4.32" fill="#64748b"/>
+    <rect x="76.32000000000001" y="69.12" width="31.68" height="4.32" fill="#64748b"/>
+    
+    <rect x="36" y="77.76" width="31.68" height="4.32" fill="#64748b"/>
+    <rect x="76.32000000000001" y="77.76" width="31.68" height="4.32" fill="#64748b"/>
+    
+    <rect x="36" y="86.39999999999999" width="31.68" height="4.32" fill="#64748b"/>
+    <rect x="76.32000000000001" y="86.39999999999999" width="31.68" height="4.32" fill="#64748b"/>
+    
+    <rect x="36" y="95.04" width="31.68" height="4.32" fill="#64748b"/>
+    <rect x="76.32000000000001" y="95.04" width="31.68" height="4.32" fill="#64748b"/>
+</svg>

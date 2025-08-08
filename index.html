@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новостной портал</title>
+    <meta name="description" content="Информационный портал с актуальными новостями">
+    <meta name="theme-color" content="#2563eb">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/x-icon" href="./public/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg">
+    <link rel="apple-touch-icon" href="./public/icon-192x192.svg">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./src/style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Загружаем новости...</p>
+    </div>
+
+    <!-- Main App -->
+    <div id="app" class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <h1 class="logo" onclick="showHomePage()">📰 NewsPortal</h1>
+                    
+                    <!-- Search -->
+                    <div class="search-container">
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="search-input" 
+                            placeholder="Поиск новостей..."
+                            autocomplete="off"
+                        >
+                        <button id="searchBtn" class="search-btn">🔍</button>
+                        <div id="searchResults" class="search-results"></div>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <nav class="nav">
+                        <button class="nav-btn active" onclick="showHomePage()">Главная</button>
+                        <button class="nav-btn" onclick="showAllNews()">Все новости</button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="container">
+                <!-- Home Page -->
+                <div id="homePage" class="page active">
+                    <section class="hero">
+                        <h2>Добро пожаловать в NewsPortal</h2>
+                        <p>Самые актуальные новости и события</p>
+                    </section>
+                    
+                    <section class="featured-news">
+                        <h3>Главные новости</h3>
+                        <div id="featuredNewsGrid" class="news-grid"></div>
+                    </section>
+                    
+                    <section class="latest-news">
+                        <h3>Последние новости</h3>
+                        <div id="latestNewsGrid" class="news-grid"></div>
+                    </section>
+                </div>
+
+                <!-- All News Page -->
+                <div id="allNewsPage" class="page">
+                    <section class="all-news">
+                        <h2>Все новости</h2>
+                        <div class="filters">
+                            <select id="sortSelect" class="filter-select">
+                                <option value="newest">Сначала новые</option>
+                                <option value="oldest">Сначала старые</option>
+                                <option value="title">По названию</option>
+                            </select>
+                        </div>
+                        <div id="allNewsGrid" class="news-grid"></div>
+                        <button id="loadMoreBtn" class="load-more-btn">Загрузить еще</button>
+                    </section>
+                </div>
+
+                <!-- Single News Page -->
+                <div id="newsDetailPage" class="page">
+                    <div id="newsDetail" class="news-detail"></div>
+                </div>
+
+                <!-- Search Results Page -->
+                <div id="searchPage" class="page">
+                    <section class="search-results-section">
+                        <h2>Результаты поиска</h2>
+                        <div id="searchQuery" class="search-query"></div>
+                        <div id="searchResultsGrid" class="news-grid"></div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 NewsPortal. Все права защищены.</p>
+                <p>Данные предоставлены <a href="https://jsonplaceholder.typicode.com" target="_blank">JSONPlaceholder</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Error Message -->
+    <div id="errorMessage" class="error-message">
+        <div class="error-content">
+            <h3>Произошла ошибка</h3>
+            <p id="errorText"></p>
+            <button onclick="hideError()">Закрыть</button>
+        </div>
+    </div>
+
+    <script src="./src/main.js"></script>
+</body>
+</html>
